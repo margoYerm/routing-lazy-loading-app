@@ -1,0 +1,28 @@
+@import 'https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600&family=Shadows+Into+Light&display=swap';
+
+
+// font-family: 'Dosis', sans-serif;
+// font-family: 'Shadows Into Light', cursive;
+
+$ffDosis: 'Dosis', sans-serif;
+$ffCursive: 'Shadows Into Light', cursive;
+
+%main-font {
+    font-family: $ffDosis;    
+    font-weight: 400;
+}
+
+%main-light {
+    font-family: $ffDosis;    
+    font-weight: 300;
+}
+
+%main-bold {
+    font-family: $ffDosis;    
+    font-weight: 600;
+}
+
+%cursive-font {
+    font-family: $ffCursive;
+    font-weight: 400;
+}

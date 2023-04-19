@@ -1,0 +1,30 @@
+<h2 class="h2">Event Binging</h2>
+
+<p>Input text and press Enter button on keyboard. You can see entered value
+  into the dashed area and massage in console, witch contains event description
+ </p>
+
+<div class="input-wrapper">
+  <input type="text"        
+    (keyup.enter)="onInput($event)"
+    (blur)="onBlur(myInput.value)"
+    #myInput>   
+</div>
+
+<p class="output-wrapper">   
+  <strong>{{ inputValue }}</strong>
+</p>
+
+<br>
+<br>
+<br>
+
+<p>
+  Click on button "Click me!" doing console.log('Clicked button')
+</p>
+
+<button 
+  class="btn"
+  (click)="onClick()">
+
+Click me!</button>   

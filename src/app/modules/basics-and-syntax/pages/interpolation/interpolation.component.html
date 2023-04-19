@@ -1,0 +1,44 @@
+<section class="content-block">
+  <h2 class="h2"> {{title}} </h2>
+
+  <p> 
+      <strong> {{ number }} </strong> <i> {{ number }}</i> <br>
+
+      <strong> {{ number - 3 }} </strong> <i> {{ number - 3 }}</i><br>
+
+      <strong> {{ arr }} </strong> <i> arr = [1, 1, 2, 3, 5, 8] </i> <br>
+  </p>
+
+  <br>
+  <hr>
+  <h3>Create object</h3>
+
+  <pre>
+  obj = &#123;
+    a: 1,
+    b: &#123;
+      c: 2,
+    &#125;
+  &#125;
+  </pre>
+
+  <p>
+    trying to display in html this obj in double curly braces looks like this
+  </p>
+
+  <p>
+    <strong> {{ obj }} </strong>              
+    <i> Angular call .toString for obj  => [object Object]</i> <br>
+  </p>
+
+  
+
+  <p>
+    <strong> {{ obj.a }} </strong> <i> obj.a  </i> <br>
+
+    <strong> {{ obj.b.c }} </strong> <i> obj.b.c  </i> <br>
+
+    <strong class="for-margo"> {{ 'Hello, ' + 'Margosha!' }} </strong>  
+  </p>    
+
+</section>

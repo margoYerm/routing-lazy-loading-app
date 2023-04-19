@@ -1,0 +1,15 @@
+@import '../../../../../assets/scss/colors';
+
+p {
+    strong {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
+
+.for-margo {
+    text-align: center;
+    color: $tiffany;
+    width: 100%;
+    font-size: 20px;
+}

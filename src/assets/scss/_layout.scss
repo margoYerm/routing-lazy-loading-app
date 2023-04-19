@@ -1,0 +1,51 @@
+@import "./fonts";
+@import "./colors";
+
+html {    
+    font-size: 10px;
+    @extend %main-font;
+}
+
+h2 {
+    //font-size: 1.8em;
+    font-size: 24px;
+    @extend %main-bold;
+}
+
+p {
+    //font-size: 1.4rem;
+    font-size: 14px;
+    padding: 5px 0;
+    @extend %main-light;   
+}
+
+strong,
+i {
+    //font-size: 1.4em;
+    font-size: 16px;
+}
+
+.h2 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+.all-page {    
+    width: calc(100vw - 40px - 300px);
+    margin-top: 80px;
+    margin-left: 20px;
+    height: calc(100vh - 100px);
+    overflow: auto;  
+    background-color: $extra-light-grey;  
+    padding: 0 10px;
+}
+
+.all-page.components-details {
+    width: calc(100vw - 40px - 315px);
+    //margin-top: 55px;
+}
+

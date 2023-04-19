@@ -1,0 +1,14 @@
+<h2 class="h2">2Way Data Bindings</h2>    
+
+<p>If you want ngModel work, you should add to imports array of 
+  parent module FormsModule, ReactiveFormsModule
+</p>
+
+<div class="input-wrapper">
+    <!-- <input type="text" [value] = "title" (input) = "onInput($event)"> -->
+    <input type="text" [(ngModel)]="title">
+</div>
+
+<p class="output-wrapper">
+    <strong>{{ title }}</strong>
+</p>

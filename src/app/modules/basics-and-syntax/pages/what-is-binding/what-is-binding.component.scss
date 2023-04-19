@@ -1,0 +1,19 @@
+.logo-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-item {
+    height: 50px;
+    width: fit-content;
+    img {
+        width: auto;
+        height: 100%;
+        border-radius: 10px;
+    }
+    &:first-of-type {
+        margin-right: 10px;
+    }
+}
