@@ -1,0 +1,19 @@
+<h2 class="h2">Dynamic classes ngClass</h2>    
+
+    <p>Two different syntax</p>
+
+    <div class="container">
+        <div [ngClass]="{
+            green: backgroundToggle,
+            violet: !backgroundToggle
+        }" ></div>
+        <button class="btn btn1" (click)="backgroundToggle = !backgroundToggle" >Toggle</button>
+    </div>
+
+    <div class="container">
+        <button class="btn btn2" (click)="backgroundSecond = !backgroundSecond" >Toggle</button>
+        <div    
+            [class.sunrise] = "!backgroundSecond" 
+            [class.sunset] = "backgroundSecond"
+        ></div>        
+    </div>

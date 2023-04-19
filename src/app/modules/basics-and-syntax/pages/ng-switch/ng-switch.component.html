@@ -1,0 +1,10 @@
+<h2 class="h2">Directive ngSwitch</h2>       
+
+<button class="btn" (click) = "toggle = !toggle">Toggle</button>
+<button class="btn" (click) = "toggle = 11">Default</button>
+
+<div [ngSwitch] = "toggle" class="container">
+    <div *ngSwitchCase="true" class="green" ></div>
+    <div *ngSwitchCase="false" class="night" ></div> 
+    <div *ngSwitchDefault class="violet" ></div> 
+</div> 

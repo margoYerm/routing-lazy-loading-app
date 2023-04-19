@@ -1,0 +1,18 @@
+<h2 class="h2">Conditional display with ngIf else</h2>    
+
+    <p>Lesson 17. Display one of two blocks. Ng-templates. To ways.</p>
+
+    <div class="container">
+        <div class="ukraine" *ngIf="toggleFlag"></div>
+        <div class="france" *ngIf="!toggleFlag"></div>       
+        <button class="btn" (click) = "toggleFlag = !toggleFlag">Toggle</button>
+    </div>
+    
+    <!-- More prioritized approach -->
+    <div class="container">        
+        <div class="spring" *ngIf="toggleSeason; else autumn"></div>
+        <button class="btn" (click) = "toggleSeason = !toggleSeason">Toggle</button>
+        <ng-template #autumn>
+            <div class="autumn"></div>  
+        </ng-template>              
+    </div>    

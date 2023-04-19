@@ -1,0 +1,41 @@
+.btn {
+    margin: 0;    
+    padding: 10px;
+    display: block;
+}
+
+.btn1 {
+    margin-left: 20px;
+}
+
+.btn2 {    
+    margin-right: 20px;
+}
+
+.container {
+    width: 100%;    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    div {
+        width: 300px;
+        height: 200px;   
+        flex-grow: 1;
+    }
+}
+
+.green {
+    background: linear-gradient(#b8f415, #67b901);
+}
+
+.violet {
+    background: linear-gradient(#290044, #9100e4);
+}
+
+.sunrise {
+    background: linear-gradient(#227de4, #47caeb);
+}
+.sunset{
+    background: linear-gradient(#e98b5b, #c198b7);
+}

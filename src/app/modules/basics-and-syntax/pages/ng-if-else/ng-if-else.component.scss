@@ -1,0 +1,46 @@
+.btn {
+    margin: 0;    
+    padding: 10px;
+    display: block;
+    margin-left: 20px;
+}
+
+.container {
+    width: 100%;    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    div {
+        width: 300px;
+        height: 200px;   
+        flex-grow: 1;
+    }
+}
+
+.ukraine {
+    background: linear-gradient(to bottom, 
+    #0058b5 0%, #0058b5 50%, 
+    yellow  50%, yellow 100%);
+}
+
+.france {
+    background: linear-gradient(to right, 
+            #0058b5 0%, #0058b5 33.3%, 
+            #ffffff 33.3%, #ffffff 66.6%, 
+            red 66.6%, red 100%);
+}
+
+.spring {
+    background-image: url('../../../../../assets/images/springImg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+            
+}
+.autumn {
+    background-image: url('../../../../../assets/images/autumnImg.webp');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

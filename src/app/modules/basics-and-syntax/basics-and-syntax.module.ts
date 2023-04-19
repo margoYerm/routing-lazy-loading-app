@@ -11,6 +11,11 @@ import { InterpolationComponent } from './pages/interpolation/interpolation.comp
 import { WhatIsBindingComponent } from './pages/what-is-binding/what-is-binding.component';
 import { EventBindingComponent } from './pages/event-binding/event-binding.component';
 import { NgStyleComponent } from './pages/ng-style/ng-style.component';
+import { NgClassDynamicClassesComponent } from './pages/ng-class-dynamic-classes/ng-class-dynamic-classes.component';
+import { NgIfElseComponent } from './pages/ng-if-else/ng-if-else.component';
+import { NgSwitchComponent } from './pages/ng-switch/ng-switch.component';
+import { NgForLoopsComponent } from './pages/ng-for-loops/ng-for-loops.component';
+import { WhatIsPipesComponent } from './pages/what-is-pipes/what-is-pipes.component';
 
 
 
@@ -30,7 +35,11 @@ import { NgStyleComponent } from './pages/ng-style/ng-style.component';
     EventBindingComponent,
     TwoWayBindingComponent,
     NgStyleComponent,
-
+    NgClassDynamicClassesComponent,
+    NgIfElseComponent,
+    NgSwitchComponent,
+    NgForLoopsComponent,
+    WhatIsPipesComponent,
   ]
 })
 

@@ -1,3 +1,19 @@
-<p>
-  ng-style works!
-</p>
+<h2 class="h2">ngStyle Directive</h2>    
+
+    <p>Draw Sun with ngStyle, binding, event binding, Ternary operator </p>
+
+    <button class="btn" (click)="backgroundToggle = !backgroundToggle">Toggle</button>
+
+    <div class="sun-wrapper">
+        <div [ngStyle]="{
+            width: '200px',
+            height: '200px',
+            borderRadius: '50%',
+            position: 'absolute',      
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%)',
+            boxShadow: '0 0 20px rgba(246, 5, 0, 0.5)',
+            backgroundColor: backgroundToggle ? 'yellow' : 'orange'
+         }"></div>    
+    </div>

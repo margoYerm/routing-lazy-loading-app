@@ -8,6 +8,11 @@ import { WhatIsBindingComponent } from './pages/what-is-binding/what-is-binding.
 import { EventBindingComponent } from './pages/event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './pages/two-way-binding/two-way-binding.component';
 import { NgStyleComponent } from './pages/ng-style/ng-style.component';
+import { NgClassDynamicClassesComponent } from './pages/ng-class-dynamic-classes/ng-class-dynamic-classes.component';
+import { NgIfElseComponent } from './pages/ng-if-else/ng-if-else.component';
+import { NgSwitchComponent } from './pages/ng-switch/ng-switch.component';
+import { NgForLoopsComponent } from './pages/ng-for-loops/ng-for-loops.component';
+import { WhatIsPipesComponent } from './pages/what-is-pipes/what-is-pipes.component';
 
 const basicsRoutes: Routes = [
   { 
@@ -42,30 +47,27 @@ const basicsRoutes: Routes = [
         path: 'ng-style',
         component: NgStyleComponent,
       },
-      /*{
-        path: 'dynamic-classes-ng-class',
-        component: DynamicClassesNgClassComponent,
+      {
+        path: 'ng-class-dynamic-classes',
+        component: NgClassDynamicClassesComponent,
       },
       {
-        path: 'dynamic-classes-ng-class',
-        component: DynamicClassesNgClassComponent,
+        path: 'ng-if-else',
+        component: NgIfElseComponent,
       },
-      {
-        path: 'app-conditional-display-ngif-else',
-        component: ConditionalDisplayNgifElseComponent,
-      },
+      
       {
         path: 'ng-switch',
         component: NgSwitchComponent,
       },
       {
-        path: 'loops-ng-for',
-        component: LoopsNgForComponent,
+        path: 'ng-for-loops',
+        component: NgForLoopsComponent,
       },
       {
         path: 'what-is-pipes',
         component: WhatIsPipesComponent,
-      }, */ 
+      },
     ],
    },
 ];
