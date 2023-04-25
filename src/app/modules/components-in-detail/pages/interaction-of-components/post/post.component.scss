@@ -1,0 +1,17 @@
+@import "../../../../../../assets/scss/colors";
+
+.card {
+    border: 1px dotted $tiffany;
+    padding: 10px; 
+    margin: 20px 0;   
+    position: relative;
+}
+
+.input-string {
+    border: 2px dotted pink;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 5px 10px;
+}
+

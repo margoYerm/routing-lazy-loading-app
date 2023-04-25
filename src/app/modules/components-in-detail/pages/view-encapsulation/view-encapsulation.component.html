@@ -1,0 +1,29 @@
+<h2>Styles with View encapsulation</h2>
+
+<p>
+  Lesson 29. View-encapsulation works!
+</p>
+
+<section class="section-container">
+  <child-view-encapsulation></child-view-encapsulation>
+</section>
+
+<section class="theory">
+  <p>
+    To change styles isolation for components by adding to the @Component
+    directive encapsulation: ViewEncapsulation.None <br>
+    Import ViewEncapsulation from '@angular/core'
+  </p>
+
+  <p>
+    Angular does not apply any sort of view encapsulation meaning that 
+    any styles specified for the component are actually globally applied 
+    and can affect any HTML element present within the application. 
+    This mode is essentially the same as including the styles into the HTML
+    itself.
+  </p>
+
+  <a class="link" href="https://angular.io/guide/view-encapsulation">
+    See more
+  </a>
+</section>

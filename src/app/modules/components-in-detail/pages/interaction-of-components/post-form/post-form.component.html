@@ -1,0 +1,18 @@
+<div class="input-wrapper">
+  <input 
+    type="text" 
+    placeholder="Title..."
+    [(ngModel)]="title"
+    #titleInput>
+</div>
+
+<div class="input-wrapper">
+  <input 
+    type="text" 
+    placeholder="Text..."
+    [(ngModel)]="text">
+</div>
+
+<button class="btn" (click)="addPost()">Add post</button>
+
+<button class="btn" (click)="focusTitle()">Focus title</button>

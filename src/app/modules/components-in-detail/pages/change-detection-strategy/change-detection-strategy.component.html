@@ -1,0 +1,53 @@
+<h2>Change Detection Strategy</h2>
+
+<p>
+  Lesson 28. Change-detection-strategy works!
+</p>
+
+<br>
+
+<section class="section-container">
+  <div class="input-wrapper">
+    <input 
+      [(ngModel)]="newFruit"
+      type="text" 
+      placeholder="Fruit...">
+  </div>
+
+  <button class="btn"
+    (click)="addFruit()"
+  >Add fruit</button>
+
+  <child-detection-strategy [fruits]="fruits"></child-detection-strategy>
+</section>
+
+<section class="theory">
+  <p>
+    Every time there is a change in the app, Angular will perform 
+    ChangeDetectorRef on all the components. Whether it is a network 
+    request or user event, change detection will be performed by Angular.
+  </p>
+
+  <p>
+    When it comes to specific components, we can set ChangeDetectionRef 
+    strategy to OnPush. Angular will take this is a call to run 
+    Changedetectionstrategy on the components and their component 
+    chain alone.
+  </p>
+
+  <p>
+    <a class="link" 
+      href="https://www.positronx.io/understand-angular-change-detection-strategy/"
+    >See more</a>
+  </p>
+
+  <p>
+    If changeDetection: ChangeDetectionStrategy.OnPush, 
+    ChildDetectionStrategyComponent will be react just on changes in 
+    @Input()<br>
+    <b>Its need to change the reference to the object. In this case, 
+      it's an array, and changing it with array methods won't work. 
+      Example in code!!! 
+    </b>
+  </p>
+</section>

@@ -14,6 +14,12 @@ const mainRoutes: Routes = [
       m.ComponentsInDetailModule) 
   },
 
+  { path: 'directives', 
+    loadChildren: () => 
+      import('./modules/directives/directives.module').then(m => 
+      m.DirectivesModule) 
+  },
+
   {
     path: '**',
     redirectTo: '',

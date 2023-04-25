@@ -1,0 +1,24 @@
+@import "../../../../../assets/scss/colors";
+
+.container {
+    border: 1px solid $tiffany;
+    padding: 5px;
+}
+
+.row {
+    display: flex;
+    margin: 15px 0;
+}
+
+.command {
+    flex-shrink: 0;
+    min-width: 180px;
+}
+
+.buffer {
+    min-width: 30px;
+}
+
+.description {
+    flex-shrink: 1;
+}

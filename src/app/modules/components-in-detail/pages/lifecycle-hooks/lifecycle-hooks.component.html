@@ -1,0 +1,193 @@
+<h2 class="h2">Lifecycle hooks</h2>    
+
+<p>Lesson 27. lifecycle-hooks works!</p>    
+
+<br>
+<child-component 
+      [parentData]="data"
+      *ngIf='showChild'
+></child-component>
+<!-- Demo ngOnChanges -->
+<a class="link" (click)="changeFromParent()">Change from parent</a><br>
+<!-- Demo ndDestroy -->
+<a class="link" (click)="updateDestroy()">ngOnDestroy</a><br/>
+
+<br>
+
+<section class="theory">
+  <p>
+    Event ngOnInit in parent component fires earlier than in the child component
+  </p>
+
+  <p>
+    All hooks show message in console and demonstrate when each one 
+    is called: ngOnInit (parent and child), constructor, ngOnChanges
+
+
+  </p>
+  <br>
+
+  <div>
+    <h4>Constructor</h4>
+    <p>
+      It is not recommended to do any logic in the constructor.
+    </p>
+    
+    <p>
+      The constructor method is a special method of a class for 
+      creating and initializing an object instance of that class.
+    </p>
+
+    <!-- <p>
+      A constructor enables you to provide any custom initialization
+      that must be done before any other methods can be called on an 
+      instantiated object.
+    </p>
+
+    <p>
+      If your class is a derived class, the default constructor calls 
+      the parent constructor, passing along any arguments that were 
+      provided:
+    </p>
+
+<pre>
+  constructor(...args) &#123;
+    super(...args);
+  &#125;
+</pre> -->
+
+    <p>
+      <a class="link"
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor">
+      More details</a>
+    </p>
+  </div>
+
+  <br>
+
+  <div>
+    <h4>ngOnChanges</h4>
+    <p>
+      Use ngOnChanges whenever you want to detect changes from a variable
+      decorated by @Input. Remember that only changes from the parent 
+      component will trigger this function.
+    </p>
+
+    <p>
+      <a class="link"
+        href="https://www.stackchief.com/blog/ngOnChanges%20Example%20%7C%20Angular">
+      More details</a>
+    </p>
+  </div>
+
+  <br>
+
+  <div>
+    <h4>ngDoCheck</h4>
+    <p>
+      Detect and act upon changes that Angular can't or won't detect on its own. 
+    </p>
+
+    <p>
+      Called immediately after ngOnChanges() on every change detection run, 
+      and immediately after ngOnInit() on the first run.
+    </p>
+
+    <p>
+      Use ngDoCheck when you want to capture changes that Angular 
+      otherwise doesn't.
+      For example, if a binding references remains unchanged after a 
+      click event, ngOnChanges won't run but ngDoCheck will.
+    </p>
+  </div>
+
+  <br>
+
+  <div>
+    <h4>ngAfterContentInit</h4>
+    <p>
+      Respond after Angular projects external content into the component's
+      view, or into the view that a directive is in. (Push ng-content to 
+      child component, Lesson 25. Sending HTML to Component)
+    </p>
+
+    <p>
+      Called once after the first ngDoCheck().
+    </p>    
+  </div>
+
+  <br>
+
+  <div>
+    <h4>ngAfterContentChecked</h4>
+    <p>
+      Respond after Angular checks the content projected into the 
+      directive or component. Called after ngAfterContentInit() and 
+      every subsequent ngDoCheck().
+    </p>
+
+    <p>
+      Use ngAfterContentChecked whenever you want to call a lifecycle 
+      event hook immediately after ngDoCheck. ngAfterContentChecked 
+      can be useful if you want to implement additional initialization
+      tasks after Angular has fully initialized the component/directive's
+      content.
+    </p>    
+  </div>
+
+  <br>
+
+  <div>
+    <h4>ngAfterViewInit</h4>
+    <p>
+      Respond after Angular initializes the component's views and child views,
+      or the view that contains the directive. Called once after the first 
+      ngAfterContentChecked().
+    </p>
+
+    <p>
+      ngAfterViewInit is useful when you want to call a lifecycle hook 
+      after all child components have been initialized and checked.
+    </p>    
+  </div>
+
+  <br>
+
+  <div>
+    <h4>ngAfterViewChecked</h4>
+    <p>
+      Respond after Angular checks the component's views and child views, 
+      or the view that contains the directive. Called after the 
+      ngAfterViewInit() and every subsequent ngAfterContentChecked().
+    </p>
+
+    <p>
+      ngAfterViewChecked is useful when you want to call a lifecycle
+      hook after all child components have been initialized and checked.
+    </p>    
+  </div>
+
+  <br>
+
+  <div>
+    <h4>ngOnDestroy</h4>
+    <p>
+      Cleanup just before Angular destroys the directive or component. 
+      Unsubscribe Observables and detach event handlers to avoid memory leaks. 
+    </p>
+
+    <p>
+      Notice how the example "destroys" the child component via the 
+      conditional ngIf='showChild'.
+      By toggling the value of showChild, Angular creates and destroys 
+      the child component each time this value changes.
+      Every time the updateDestroy() function is triggered, ngOnInit() 
+      or ngOnDestroy() is called on the child component.
+    </p>
+
+    <p>
+      Called immediately before Angular destroys the directive or component.
+    </p>  
+  </div>
+  
+</section>

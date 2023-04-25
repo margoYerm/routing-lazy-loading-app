@@ -1,0 +1,77 @@
+<h2>Interaction of Components</h2>
+
+<ul class="list-lessons">
+  <li><span>Lesson 21.</span> Create structure mini-project</li>
+  <li><span>Lesson 22.</span> Passing parameters</li>
+  <li><span>Lesson 23.</span> Passing parameters from components</li>
+  <li><span>Lesson 24.</span> Accessing HTML elements (@ViewChild)</li>
+  <li><span>Lesson 25.</span> Passing HTML to a Component</li>
+  <li><span>Lesson 26.</span> Accessing content with ContentChild</li> 
+</ul>
+
+<section class="section-container">
+  <post-form
+    (onAdd)="updatePosts($event)"
+  ></post-form>
+</section>
+
+<section class="section-container">
+  <post *ngFor="let p of posts" 
+    [myPost]="p"
+    (onRemove)="removePost($event)">
+
+    <div #info>
+      <small  class="message-length" 
+        *ngIf="p.text.length > 10; else short">
+          The post is long
+      </small>
+
+      <ng-template #short>
+        <small class="message-length">The post is short</small>
+      </ng-template>
+    </div>
+    
+  </post>
+</section>
+
+
+<section class="theory">
+  <p>@Input() lets a parent component update data in the child component.</p>
+  
+  <p>
+      The @Input() decorator in a child component or directive signifies that 
+      the property can receive its value from its parent component.
+  </p>
+
+  <p>
+      @Input() properties can have any type, such as number, string, 
+      boolean, or object. The value for item comes from the parent component.
+  </p>
+
+   <p>
+      @Output() Decorator that marks a class field as an output property 
+      and supplies configuration metadata. The DOM property bound to the
+       output property is automatically updated during change detection. 
+  </p>
+
+   <p>
+      In this case @Output() sending new EventEmitter &#10094;Post&#10095; () with data.
+      To accept this data in parent component, needs coll this method with 
+      $event arg (onAdd)="updatePosts($event)"
+  </p>
+
+  <p>
+    Using @ViewChild('titleInput') inputRef: ElementRef; in post-form.component
+  </p>
+
+  <p>
+    Using ng-content with ng-template
+  </p>
+
+  <p>
+    Using ContentChild in interaction-of-components.html and 
+    post.ts (method ngOnInit()) with args &#10100;static: true&#10101;.
+    it show in console div with length for each post
+  </p>
+  
+</section>

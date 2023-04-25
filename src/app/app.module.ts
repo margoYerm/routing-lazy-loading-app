@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { MainNavComponent } from './shared-components/main-nav/main-nav.component';
 import { BasicsAndSyntaxModule } from './modules/basics-and-syntax/basics-and-syntax.module';
 import { ComponentsInDetailModule } from './modules/components-in-detail/components-in-detail.module';
+import { DirectivesModule } from './modules/directives/directives.module';
 
 
 @NgModule({
@@ -19,11 +20,12 @@ import { ComponentsInDetailModule } from './modules/components-in-detail/compone
   imports: [
     BrowserModule,    
     AppRoutingModule,
-    //CommonModule,
-    //FormsModule,    
-    //ReactiveFormsModule,
+    CommonModule,
+    FormsModule,    
+    ReactiveFormsModule,
     BasicsAndSyntaxModule,
     ComponentsInDetailModule,
+    DirectivesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

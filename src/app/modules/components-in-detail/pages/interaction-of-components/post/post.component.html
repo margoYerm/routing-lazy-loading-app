@@ -1,0 +1,15 @@
+<div class="card">
+  <h3> {{ myPost.title }} </h3>
+
+  <p> {{ myPost.text }} </p>
+
+  <button class="btn-delete btn-delete_absolute"
+  (click)="removePost()"
+  >&times;</button>
+
+  <!-- <p class="input-string">
+    Today's item: {{item}}
+  </p> -->
+
+  <ng-content></ng-content>
+</div>
