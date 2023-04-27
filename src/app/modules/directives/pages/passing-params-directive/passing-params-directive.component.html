@@ -1,0 +1,70 @@
+<h2>Passing parameters to a directive</h2>
+
+<p>Lesson 33. Passing params to the directive</p>
+
+<section>
+  <h3></h3>
+
+  <p>
+    This demo block handles Click on text element, mouse hover event.    
+    It also uses an object to pass style parameters
+  </p>
+  
+  <p>
+    If we pass a string as a parameter to html, then we do not have to
+    bind this parameter (wrapped in square brackets). If this is another
+    data type (for example, an object, number, array), then it needs
+    to be bind.
+  </p>
+
+<pre>
+appStyleParams="green" || [appStyleParams]="'green'"
+[dStyles]="&#10100;border: '1px dashed pink', 
+            fontWeight: 'bold', 
+            borderRadius: '10px'&#10101;"
+</pre>
+</section>
+
+<section class="demo">
+  <h3>Demo how it works</h3>
+  
+  <p appStyleParams="green"
+    [dStyles]="{border: '1px dashed pink', fontWeight: 'bold', borderRadius: '10px'}">
+    ... René le Florentin fournit les poisons à l'implacable 
+    Catherine de Médicis. Le vieux Louvre avec ses fêtes brillantes, 
+    ses passages secrets, son peuple de soldats et de jolies femmes, 
+    est le théâtre où se déploient en mille péripéties les jeux 
+    de l'amour, de la politique, de la haine. ...
+  </p>
+
+  <p appStyleParams="pink"
+    [dStyles]="{border: '1px dashed green', fontWeight: 'bold', borderRadius: '5px'}">
+    ... Le père des Trois Mousquetaires nous en donne une passionnante
+    chronique, où sa pétulante bonne humeur survit aux plus sanglants
+    épisodes.
+  </p>
+</section>
+
+<br>
+<h2>HostBinding</h2>
+
+<p>Lesson 34. How works HostBinding</p>
+
+<section>  
+  <a href="https://angular.io/api/core/HostBinding" class="link">
+    See more
+  </a>
+</section>
+
+<section class="demo">
+  <h3>Demo how it works</h3>
+  
+  <p appStyleHostBinding="violet">
+    Le roman débute en 1572 avec le mariage de Marguerite de Valois, 
+    dite la reine Margot, avec Henri de Navarre, chef de file des 
+    Huguenots. Six jours plus tard, c’est la Saint-Barthélemy, le
+    massacre des protestants par les catholiques.
+    Henri de Navarre y échappe en abjurant momentanément sa foi. 
+  </p>
+  
+</section>

@@ -1,3 +1,112 @@
+<h2>How to create Directive</h2>
+
 <p>
-  create-directive works!
+  Lesson 30. Create directive <br>
+  Lesson 31. Element access
 </p>
+
+<h3>Basics directives</h3>
+
+<ul class="list">
+  <li class="list-li">
+    <b>NgClass </b>
+    <span>[ngClass]</span>
+    <span>
+      Adds and removes CSS classes on an HTML element.
+    </span>
+    <a class="link"
+      href="https://angular.io/api/common/NgClass"
+    >See more</a>
+  </li>
+
+  <li class="list-li">
+    <b>NgStyle </b>
+    <span>[ngStyle]</span>
+    <span>
+      An attribute directive that updates styles for the containing HTML element. 
+    </span>
+    <a class="link"
+      href="https://angular.io/api/common/NgStyle"
+    >See more</a>
+  </li>
+
+  <li class="list-li">
+    <b>NgFor </b>
+    <span>*ngFor</span>
+    <span>
+      A structural directive that renders a template for each item in 
+      a collection. The directive is placed on an element, which 
+      becomes the parent of the cloned templates.
+    </span>
+    <a class="link"
+      href="https://angular.io/api/common/NgFor"
+    >See more</a>
+  </li>
+
+  <li class="list-li">
+    <b>NgIf </b>
+    <span>*ngIf="condition"</span>
+    <span>
+      A structural directive that conditionally includes a template 
+      based on the value of an expression coerced to Boolean. 
+    </span>
+    <a class="link"
+      href="https://angular.io/api/common/NgIf"
+    >See more</a>
+  </li>
+
+  <li class="list-li">
+    <b>NgSwitch </b>
+    <span>[ngSwitch]="switch_expression"</span>
+    <span>
+      The [ngSwitch] directive on a container specifies an expression 
+      to match against. The expressions to match are provided by 
+      ngSwitchCase directives on views within the container. 
+    </span>
+    <a class="link"
+      href="https://angular.io/api/common/NgSwitch"
+    >See more</a>
+  </li>
+</ul>
+
+
+<section>
+  <h3>How to create own directive</h3>
+
+  <p><b>1.</b> In cli type ng g d directives/name --skipTests </p>
+
+  <p><b>2.</b> 
+    Create folder directives, in this project created ng-directives.. But in 
+    production project it's reserved for directives! In this folder create 
+    file name.directive.ts 
+  </p>
+
+  <p>
+    In file name.directive.ts add 
+  </p>
+
+  <pre>
+@Directive(&#10100;
+  selector: '[appStyle]'
+&#10101;)
+  </pre> 
+
+  <p>
+    export class NameDirective &#10100;&#10101;
+  </p>  
+
+  <p>
+    Add this directive to declarations in this.module.ts
+  </p> 
+</section>
+
+<section class="demo">
+  <h3>Demo how it works</h3>
+  <p appStyle>
+    La Reine Margot (Alexandre Dumas) <br>
+    1572. La France des guerres de religion est devenue le champ clos des
+    grands seigneurs et des prétendants au trône. A Paris, le jeune roi 
+    protestant de Navarre, le futur Henri IV, vient d'épouser 
+    Marguerite de Valois, dite Margot.
+  </p>
+</section>

@@ -3,7 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DirectivesComponent } from './directives.component';
 import { CreateDirectiveComponent } from './pages/create-directive/create-directive.component';
-import { ElementAccessComponent } from './pages/element-access/element-access.component';
+import { AddingEventsComponent } from './pages/adding-events/adding-events.component';
+import { PassingParamsDirectiveComponent } from './pages/passing-params-directive/passing-params-directive.component';
+import { CreateStructuralDirectiveComponent } from './pages/create-structural-directive/create-structural-directive.component';
+
 
 const directivesRoutes: Routes = [
   { 
@@ -15,21 +18,17 @@ const directivesRoutes: Routes = [
         component: CreateDirectiveComponent,
       }, 
       {
-        path: 'element-access',
-        component: ElementAccessComponent,
+        path: 'adding-events',
+        component: AddingEventsComponent,
       }, 
-      /*{
-        path: 'lifecycle-hooks',
-        component: LifecycleHooksComponent,
+      {
+        path: 'passing-params-directive',
+        component: PassingParamsDirectiveComponent,
       },
       {
-        path: 'change-detection-strategy',
-        component: ChangeDetectionStrategyComponent,
-      },
-      {
-        path: 'view-encapsulation',
-        component: ViewEncapsulationComponent,
-      }*/
+        path: 'create-structural-directive',
+        component: CreateStructuralDirectiveComponent,
+      },      
     ],
   },
 ];

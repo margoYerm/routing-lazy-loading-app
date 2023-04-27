@@ -1,0 +1,58 @@
+<h2>Create structural directive</h2>
+
+<p>Lesson 35. How ro create structural directive</p><br>
+
+<section>
+  <p>
+    Add to create-structural-directive.component.ts a condition 
+    isVisible = true
+  </p>
+
+  <p>Add condition to html (*ngIf="isVisible")</p>
+
+  <p>Add button with action (click)="isVisible = !isVisible"</p>
+
+  <p>Add ng-template [ngIf]="isVisible" and update condition</p>
+  
+  <a href="https://angular.io/guide/structural-directives" class="link">
+    See more
+  </a>
+</section>
+
+<section class="demo">
+  <h3>Demo how it works</h3>
+
+  <button class="btn"
+    (click)="isVisible = !isVisible">
+    Show toggle
+  </button>
+
+  <ng-template [ngIf]="isVisible">
+    <div class="wrap">
+      <p>
+        Le lundi, dix-huitième jour du mois d’août 1572, 
+        il y avait grande fête au Louvre.
+      </p>
+    </div>
+  </ng-template>
+
+  <button class="btn"
+    (click)="isVisible2 = !isVisible2">
+    Show toggle
+  </button>
+
+  <ng-template [appIfNot]="!isVisible2">
+    <div class="wrap">
+      <p>
+        Les fenêtres de la vieille demeure royale, ordinairement si 
+        sombres, étaient ardemment éclairées; les places et les rues 
+        attenantes, habituellement si solitaires, dès que neuf heures
+        sonnaient à Saint-Germain-l’Auxerrois, étaient, quoiqu’il fût
+        minuit, encombrées de populaire. 
+      </p>
+    </div>
+  </ng-template>
+  
+  
+  
+</section>
