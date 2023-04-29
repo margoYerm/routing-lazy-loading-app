@@ -1,0 +1,73 @@
+<h2>How to create custom pipe</h2>
+<p>
+  Lesson 41. Create pipe
+  Lesson 42. Generate pipe with CLI
+</p>
+
+<section class="theory">
+  <p>
+    Create folder pipes in current module. And file name.pipe.ts into 
+    pipes folder. 
+  </p>
+
+  <p>
+    In name.pipe.ts add import Pipe from @angular/core, add decorator 
+    @Pipe with name for using the pipe, add export class NamePipe 
+    implements PipeTransform. Add method transform to this class.   
+  </p>
+
+  <p>
+    Add NamePipe to declarations in current module.
+  </p>
+
+  <p>
+    Or create pipe with CLI <br>
+    <b>ng g p .../pipes/name</b>
+  </p>
+</section>
+
+<section class="demo">
+  <h3>Demo how it works</h3>
+
+  <p>
+    {{ 10 | multPipe }} 
+    //&#10100;&#10100; 10 | multPipe &#10101;&#10101;    
+  </p>
+
+  <p>
+    {{ 10 | multPipe:1 }} 
+    //&#10100;&#10100; 10 | multPipe:1 &#10101;&#10101;    
+  </p>
+
+  <p>
+    {{ 10 | multPipe:2 }} 
+    //&#10100;&#10100; 10 | multPipe:2 &#10101;&#10101;    
+  </p>
+
+  <p>
+    {{ 10 | multPipe:3 }} 
+    //&#10100;&#10100; 10 | multPipe:3 &#10101;&#10101;    
+  </p>
+
+  <p>
+    {{ 10 | multPipe:5 }} 
+    //&#10100;&#10100; 10 | multPipe:5 &#10101;&#10101;    
+  </p>
+
+  <p>
+    {{ 10 | multPipe:8 }} 
+    //&#10100;&#10100; 10 | multPipe:8 &#10101;&#10101;    
+  </p>
+
+  <p>
+    {{ 10 | multPipe:13 }} 
+    //&#10100;&#10100; 10 | multPipe:13 &#10101;&#10101;    
+  </p>
+
+  <hr>
+
+  <p>
+    {{ 'Hello world     ' | exMarks }} 
+    //&#10100;&#10100; 'Hello world     ' | exMarks &#10101;&#10101;    
+  </p>
+</section>

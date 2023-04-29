@@ -23,13 +23,13 @@ import { CreateStructuralDirectiveComponent } from './pages/create-structural-di
     FormsModule,
     DirectivesRoutingModule,
   ],
-  declarations: [
-    StyleDirective,
-    StyleParamsDirective,
-    StyleHostBindingDirective,
-    IfNotDirective,
+  declarations: [    
     DirectivesComponent,
     DirectivesNavComponent,
+    StyleDirective,    
+    StyleParamsDirective,
+    StyleHostBindingDirective,
+    IfNotDirective,    
     CreateDirectiveComponent,
     AddingEventsComponent,
     PassingParamsDirectiveComponent,

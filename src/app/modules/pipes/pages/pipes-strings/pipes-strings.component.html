@@ -1,0 +1,44 @@
+<h2>Working with strings</h2>
+
+<p>Lesson 37. How to working pipes with strings</p><br>
+
+<section>  
+  <a href="https://angular.io/guide/pipes" class="link">
+    See more
+  </a> <br>
+
+  <a href="https://angular.io/api?type=pipe" class="link">
+    Angular API Pipes
+  </a>  
+</section>
+
+<section class="demo">
+  <h3>Demo how it works</h3>
+
+  <p>{{ str }} //&#10100;&#10100; str &#10101;&#10101;</p>
+  
+  <p>{{ str | uppercase }} //&#10100;&#10100; 
+    str | uppercase &#10101;&#10101;
+  </p>
+
+  <p>{{ str | uppercase | lowercase }} //&#10100;&#10100; 
+    str | uppercase | lowercase  &#10101;&#10101;
+  </p>
+
+  <p>{{ str | titlecase }} //&#10100;&#10100; 
+    str | titlecase  &#10101;&#10101;
+  </p>
+
+  <p>{{ str | titlecase | slice:1 }} //&#10100;&#10100; 
+    str | titlecase | slice:1  &#10101;&#10101;
+  </p>
+
+  <p>{{ str | titlecase | slice:1:5 }} //&#10100;&#10100; 
+    str | titlecase | slice:1:5  &#10101;&#10101;
+  </p>
+
+  <p>{{ str | titlecase | slice:1:5-2 }} //&#10100;&#10100; 
+    str | titlecase | slice:1:5-2  &#10101;&#10101;
+  </p>
+  
+</section>

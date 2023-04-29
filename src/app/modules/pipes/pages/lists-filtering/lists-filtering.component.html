@@ -1,0 +1,62 @@
+<h2>Lists filtering</h2>
+<p>
+  Lesson 43. Lists filtering <br>
+  Lesson 44. Optimization pipes
+</p>
+
+<section class="theory">
+  <p>
+    Add FormsModule to imports in current module!!! 
+  </p>
+
+  <p>
+    Add field to interface Post with special syntax!!!  
+    Attention this moment (it's for pipe)
+  </p>
+
+  <p>    
+    If you enter jQuery into the search and then add a post, 
+    it will not participate in the filtering...
+    <a href="https://angular.io/api/core/Pipe">See more</a> 
+    Option pure. 
+    To change this behavior, add property pure: false to 
+    decorator pipe @Pipe in name.pipe.ts
+  </p>
+</section>
+
+<section class="demo">
+  <h3>How it works</h3>
+
+  <div class="btn-container">
+    <div>
+      <button class="btn"
+        (click)="searchField = 'title'"
+        >Title
+      </button>
+      
+      <button class="btn"
+        (click)="searchField = 'text'"
+        >Text
+      </button>
+    </div>
+
+    <div>
+      <button class="btn"
+        (click)="addPost()">
+        Add new post
+      </button>
+    </div>
+  </div>  
+
+  <div class="input-wrapper">
+    <input type="text" 
+    [(ngModel)]="search"
+    placeholder="Search...">
+  </div>
+
+  <div class="posts-wrapper"
+    *ngFor="let post of posts | filter:search:searchField">
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.text }}</p>
+  </div>
+</section>

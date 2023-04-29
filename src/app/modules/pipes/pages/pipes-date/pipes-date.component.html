@@ -1,0 +1,45 @@
+<h2>Working with date</h2>
+
+<p>Lesson 37. How to working pipes with dates</p><br>
+
+<section class="theory">  
+  <a href="https://angular.io/api/common/DatePipe" class="link">
+    See more
+  </a>
+</section>
+
+<section class="demo">
+  <h3>Demo how it works</h3>
+
+  <p>{{ date }} //&#10100;&#10100; date &#10101;&#10101;</p>
+  
+  <p>{{ date | date }} //&#10100;&#10100; 
+    date | date &#10101;&#10101;
+  </p>
+  
+  <p>{{ date | date:'fullDate' }} //&#10100;&#10100; 
+    date | date:'fullDate' &#10101;&#10101;
+  </p>
+
+  <p>{{ date | date:'longDate' }} //&#10100;&#10100; 
+    date | date:'longDate' &#10101;&#10101;
+  </p>
+
+  <p>{{ date | date:'long' }} //&#10100;&#10100; 
+    date | date:'long' &#10101;&#10101;
+  </p>
+
+  <p>{{ date | date:'yyyy' }} //&#10100;&#10100; 
+    date | date:'yyyy' &#10101;&#10101;
+  </p>
+
+  <p>{{ date | date:'MMMM dd yyyy' }} //&#10100;&#10100; 
+    date | date:'MMMM dd yyyy' &#10101;&#10101;
+  </p>
+
+  <p>{{ date | date:'MMMM dd, yyyy, HH:mm:ss' }} //&#10100;&#10100; 
+    date | date:'MMMM dd, yyyy, HH:mm:ss' &#10101;&#10101;
+  </p>
+</section>
+
+

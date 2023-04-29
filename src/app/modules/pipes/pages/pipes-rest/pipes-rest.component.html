@@ -1,0 +1,61 @@
+<h2>Rest pipes</h2>
+
+<p>Lesson 38. More pipes</p><br>
+
+<section class="theory"> 
+  <h2>Currency pipes</h2> 
+  <a href="https://angular.io/api/common/CurrencyPipe" class="link">
+    See more
+  </a>
+</section>
+
+<section class="demo">
+  <p>{{ float }} //&#10100;&#10100; float &#10101;&#10101;</p>
+
+  <p>{{ float | currency }} 
+    //&#10100;&#10100; float | currency &#10101;&#10101;
+  </p>
+</section>
+
+<br>
+
+<section class="theory"> 
+  <h2>Percent pipes</h2> 
+  <a href="https://angular.io/api/common/PercentPipe" class="link">
+    See more
+  </a>
+</section>
+
+<section class="demo">  
+  <p>{{ float | percent }} 
+    //&#10100;&#10100; float | percent &#10101;&#10101;
+  </p>
+
+  <p>{{ float | percent:'3.1-2' }} 
+    //&#10100;&#10100; float | percent:'3.1-2' &#10101;&#10101;
+  </p>
+
+  <p>{{ float | percent:'2.0-0' }} 
+    //&#10100;&#10100; float | percent:'2.0-0' &#10101;&#10101;
+  </p>
+</section><br>
+
+<h2>
+  Debug for objects with pipe json into &#10092;pre&#10093;
+  &#10092;/pre&#10093; 
+</h2> 
+
+<section class="demo"> 
+<pre class="demo-pre">
+  {{ obj }}//&#10100;&#10100; obj &#10101;&#10101;
+</pre>
+
+  <p>
+    This happens because Angular tries to transform the value in the 
+    double curly braces into a string obj.toString()
+  </p>
+
+  <pre class="demo-pre">
+    {{ obj | json }}//&#10100;&#10100; obj | json &#10101;&#10101;
+  </pre>  
+</section>

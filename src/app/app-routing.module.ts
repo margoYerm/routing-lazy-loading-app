@@ -20,6 +20,12 @@ const mainRoutes: Routes = [
       m.DirectivesModule) 
   },
 
+  { path: 'pipes', 
+    loadChildren: () => 
+      import('./modules/pipes/pipes.module').then(m => 
+      m.PipesModule) 
+  },
+
   {
     path: '**',
     redirectTo: '',

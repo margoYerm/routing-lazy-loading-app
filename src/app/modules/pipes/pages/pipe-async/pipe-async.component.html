@@ -1,0 +1,20 @@
+<h2>Pipe async</h2>
+
+<p>
+  Lesson 45. pipe-async works!
+</p>
+
+<section class="theory"></section>
+
+<section class="demo">
+  <h3>How it works</h3>
+  <p>Wait for it... {{ promise | async }}</p>
+
+  <h4>Pipe async with Observable</h4>
+
+  <p>Date: {{ date$ | async | date:'HH:mm:ss yyyy' }}</p>
+
+  <h4>Classic way</h4>
+
+  <p>Classic way date: {{ date2 | date:'HH:mm:ss' }}</p>
+</section>

@@ -10,6 +10,7 @@ import { MainNavComponent } from './shared-components/main-nav/main-nav.componen
 import { BasicsAndSyntaxModule } from './modules/basics-and-syntax/basics-and-syntax.module';
 import { ComponentsInDetailModule } from './modules/components-in-detail/components-in-detail.module';
 import { DirectivesModule } from './modules/directives/directives.module';
+import { PipesModule } from './modules/pipes/pipes.module';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { DirectivesModule } from './modules/directives/directives.module';
     BasicsAndSyntaxModule,
     ComponentsInDetailModule,
     DirectivesModule,
+    PipesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
