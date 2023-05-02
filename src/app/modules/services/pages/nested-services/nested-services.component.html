@@ -1,0 +1,25 @@
+<h2>Nested Services</h2>
+<p>Lesson 50. nested-services works!</p>
+
+<section class="theory">
+    <p>
+        Added 2 services, which connected (ParentLogService and LogService). 
+        They do same counter and logging into console some text. 
+    </p>
+</section>
+
+<section class="demo">
+    <h3>How it works</h3>
+
+    <div class="card">
+        <p><b>Local Counter </b>{{ comboServices.counter }}</p>
+    
+        <button class="btn"
+          (click)="comboServices.increase()"
+        >+</button>
+    
+        <button class="btn"
+        (click)="comboServices.decrease()"
+        >-</button>
+      </div>
+</section>

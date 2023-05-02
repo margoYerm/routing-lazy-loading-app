@@ -1,0 +1,25 @@
+<div class="card">
+    <p><b>App Counter </b>{{ appCounterServiceSS.counter }}</p>
+
+    <button class="btn"
+      (click)="appCounterServiceSS.increase()"
+    >+</button>
+
+    <button class="btn"
+    (click)="appCounterServiceSS.decrease()"
+    >-</button>
+</div>
+<br>
+
+<div class="card">
+    <p><b>Local child (service scope) counter </b>
+        {{ localCounterServiceSS.counter }}</p>
+
+    <button class="btn"
+      (click)="localCounterServiceSS.increase()"
+    >+</button>
+
+    <button class="btn"
+    (click)="localCounterServiceSS.decrease()"
+    >-</button>
+  </div>

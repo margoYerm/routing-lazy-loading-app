@@ -26,6 +26,12 @@ const mainRoutes: Routes = [
       m.PipesModule) 
   },
 
+  { path: 'services', 
+    loadChildren: () => 
+      import('./modules/services/services.module').then(m => 
+      m.ServicesModule) 
+  },
+
   {
     path: '**',
     redirectTo: '',

@@ -1,0 +1,63 @@
+<h2>Local services</h2>
+<p>  
+  Lesson 48. Services-local works!
+  Lesson 49. Services scope
+</p>
+
+<section class="theory"> 
+  <p>For registration local service, add to decorator @Component property
+    providers with value [Name Service].
+  </p>
+
+  <h3>Services scope</h3>
+  <p>AppCounterService has local variable counter=0. This service used 3 times
+    into different components. And this service registered in module (
+    2 ways: provider in module.ts, or @Injectable in service).
+    When it changed in 1 place, its changing in this 3 components 
+    (Creating service, App Counter for demo on this page,
+    and in Services scope component, which shows on this page)
+  </p>
+
+  <p>
+    LocalCounter has same code. But it registered in using components,
+    added property providers into @Component. And this counter changing
+    just in 1 place!
+  </p>
+
+</section>
+
+<section class="demo">
+  <h3>How it works</h3>
+
+  <div class="card">
+    <p><b>Local Counter </b>{{ localCounterService.counter }}</p>
+
+    <button class="btn"
+      (click)="localCounterService.increase()"
+    >+</button>
+
+    <button class="btn"
+    (click)="localCounterService.decrease()"
+    >-</button>
+  </div>
+
+  <br>
+  <h4>App counter for demo</h4>
+  <div class="card">
+    <p><b>App Counter </b>{{ appCounterDemo.counter }}</p>
+
+    <button class="btn"
+      (click)="appCounterDemo.increase()"
+    >+</button>
+
+    <button class="btn"
+    (click)="appCounterDemo.decrease()"
+    >-</button>
+  </div>
+
+  <br><hr>
+
+  <h4>Services scope</h4>
+  <p>AppCounterService into child component</p>
+  <services-scope></services-scope>
+</section>

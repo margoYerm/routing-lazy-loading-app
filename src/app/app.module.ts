@@ -11,6 +11,7 @@ import { BasicsAndSyntaxModule } from './modules/basics-and-syntax/basics-and-sy
 import { ComponentsInDetailModule } from './modules/components-in-detail/components-in-detail.module';
 import { DirectivesModule } from './modules/directives/directives.module';
 import { PipesModule } from './modules/pipes/pipes.module';
+import { ServicesModule } from './modules/services/services.module';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { PipesModule } from './modules/pipes/pipes.module';
     ComponentsInDetailModule,
     DirectivesModule,
     PipesModule,
+    ServicesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

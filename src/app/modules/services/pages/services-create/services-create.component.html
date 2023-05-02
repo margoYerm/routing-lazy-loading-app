@@ -1,0 +1,84 @@
+<h2>How to create a service</h2>
+<p>
+  Lesson 46. Services-create works!
+  Lesson 47. Decorator Injectable.
+</p>
+
+<section class="theory">
+  <h3>What is a service</h3>
+
+  <p>
+    Service is class that serve to work with data and associate this data 
+    with the display. 
+    Services can be just a class, without a decorator. But, in order to 
+    avoid errors, it is still better to use them.
+  </p>
+
+  <p>
+    Dependency Injection, or DI, is a design pattern and mechanism for
+    creating and delivering some parts of an application to other parts 
+    of an application that require them. Angular supports this design 
+    pattern and you can use it in your applications to increase 
+    flexibility and modularity.
+  </p>
+
+  <p>
+    In Angular, dependencies are typically <b>services</b>, but they also 
+    can be values, such as strings or functions. An injector for an 
+    application (created automatically during bootstrap) instantiates 
+    dependencies when needed, using a configured provider of the 
+    service or value.
+  </p>
+
+  <a class="link"
+    href="https://angular.io/guide/dependency-injection-overview">
+  See more</a>
+
+  <p>
+    With @Injectable() you can using another services in current service.
+    Just add import and create variable with another service into 
+    constructor. <br>
+    <b>Attention!!!! </b>Don't use in html private properties from
+    constructor. It's impossible. Use protected or public.
+  </p>
+
+  <p>
+    @Injectable() can accept object of arguments 
+    &#10100;providedIn: 'root'&#10101; <br>
+    It's gives us the opportunity not to register the service in the 
+    module file, but tells us to register this service in the root module
+  </p>
+
+  <h3>Creating a service</h3>
+
+  <p>ng generate service href/name</p>
+
+  <p>
+    Or  Create folder services (in this case services-ng). 
+    Create file name.service.ts. In the file name.service.ts 
+    add export class AppNameService &#10100;&#10101; <br>
+    Add AppNameService to array providers in current module.ts
+    Create service in name.service.ts
+  </p>
+
+  <p>
+    Add service in target component in the constructor
+  </p>
+  
+</section>
+
+<section class="demo">
+  <h3>How it works</h3>
+
+  <div class="card">
+    <p><b>App Counter </b>{{ appCounterService.counter }}</p>
+
+    <button class="btn"
+      (click)="appCounterService.increase()"
+    >+</button>
+
+    <button class="btn"
+    (click)="appCounterService.decrease()"
+    >-</button>
+  </div>  
+</section>
