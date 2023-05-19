@@ -23,3 +23,12 @@
     padding: 10px;
     min-height: 42px;
 }
+
+input.ng-invalid.ng-touched {    
+    border-bottom: 1px solid red !important;
+    color: red;   
+}
+
+.message-error {
+    color: red;
+}

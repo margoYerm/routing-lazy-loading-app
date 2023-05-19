@@ -1,0 +1,25 @@
+<h2>Create custom NgModel</h2>
+
+<p>
+  Lesson 63. Custom-ng-model works!
+</p>
+
+<section class="theory">
+  <p>
+    It's can be used like ngModel or FormControl. They working on 
+    same principe
+  </p>
+</section>
+
+<section class="demo">
+  <h3>How it works</h3>
+
+  <switch-nested 
+    [(ngModel)]="appState"
+    (ngModelChange)="handleChange()">
+  </switch-nested>
+
+  <hr>
+
+  <p>appState: {{ appState }}</p>
+</section>

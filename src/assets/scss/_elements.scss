@@ -21,6 +21,11 @@
     &:last-of-type {
         margin-right: 0;
     }
+    &:disabled {
+        background-color: darkgray;
+        border: 1px solid black;
+        cursor: not-allowed;
+    }
 }
 
 .btn-delete {
