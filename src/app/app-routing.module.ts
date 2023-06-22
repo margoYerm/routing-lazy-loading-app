@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-//import { FormsAndValidationComponent } from './modules/forms-and-validation/forms-and-validation.component';
 
 const mainRoutes: Routes = [
   { path: 'basics-and-syntax', 
@@ -34,11 +33,16 @@ const mainRoutes: Routes = [
   },
 
   { path: 'forms-and-validation', 
-    //component: FormsAndValidationComponent,
     loadChildren: () => 
       import('./modules/forms-and-validation/forms-and-validation.module').then(m => 
       m.FormsAndValidationModule) 
   }, 
+
+  { path: 'my-http-client', 
+    loadChildren: () => 
+      import('./modules/my-http-client/my-http-client.module').then(m => 
+      m.MyHttpClientModule) 
+  },
 
   {
     path: '**',

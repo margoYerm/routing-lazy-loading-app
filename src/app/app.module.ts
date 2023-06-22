@@ -13,6 +13,7 @@ import { DirectivesModule } from './modules/directives/directives.module';
 import { PipesModule } from './modules/pipes/pipes.module';
 import { ServicesModule } from './modules/services/services.module';
 import { FormsAndValidationModule } from './modules/forms-and-validation/forms-and-validation.module';
+import { MyHttpClientModule } from './modules/my-http-client/my-http-client.module';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { FormsAndValidationModule } from './modules/forms-and-validation/forms-a
     PipesModule,
     ServicesModule,
     FormsAndValidationModule,
+    MyHttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,78 @@
+<h2>Working with the server HttpClient</h2>
+
+<p>
+  Lesson 64. Introduction to working with server <br>
+  Lesson 65. Getting data and output to a template <br>
+  Lesson 66. Creating objects with POST <br>
+  Lesson 67. RxJS operators and indicator for download <br>
+  Lesson 68. Remove elements <br>
+  Lesson 69. Transfer logic to service <br>
+  Lesson 70. Modification elements with PUT <br>
+  Lesson 71. Errors processing <br>
+  Lesson 72. Adding headers <br>
+  Lesson 73. Working with parameters <br>
+  Lesson 74. Parameter observe <br>
+  Lesson 75. Interception of requests with an interceptor <br>
+  Lesson 76. Request Modification and Response Processing <br>
+</p>
+
+<section class="theory">
+  
+</section>
+
+<section class="demo">
+  <h3>How it works</h3>
+
+  <div class="card">
+    <div class="form-control">
+      <input type="text" placeholder="Name" [(ngModel)]="todoTitle">
+    </div>
+
+    <button class="btn"
+      (click)="addTodo()"
+    >Add</button>
+    <button class="btn"
+      (click)="fetchTodos()"
+    >Download</button>
+  </div>
+
+  <p class="error-message"
+    *ngIf="error; else todosBlock"
+  >{{error}}</p>
+
+  <ng-template #todosBlock>
+    <div *ngIf="!loading; else loadingBlock">
+      <div *ngIf="todos.length; else noTodos">
+        <div class="card">
+          <div class="card-item" 
+            *ngFor="let todo of todos">
+            <p class="card-text" [class.completed]="todo.completed">
+              {{ todo.title | titlecase }}
+            </p>      
+  
+            <div class="card-actions">
+              <button class="btn btn-danger"
+                (click)="removeTodo(todo.id!)"
+              >Remove</button>
+  
+              <button class="btn" 
+                [disabled]="todo.completed"
+                (click)="completeTodo(todo.id!)" 
+              >Complete</button>
+            </div>
+
+          </div>       
+        </div>
+      </div>  
+    </div>
+  </ng-template>  
+
+  <ng-template #noTodos>
+    <p>The task list is empty. Add a task.</p>
+  </ng-template>
+
+  <ng-template #loadingBlock>
+    <p>Loading...</p>
+  </ng-template>
+  
+</section>
