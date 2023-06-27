@@ -1,0 +1,23 @@
+<h1>Basics and syntax module</h1>
+
+<p class="module-desription">This module describes the basic syntax and basic features 
+  of the Angular framework.
+</p>
+
+<section>
+  <div class="cards-container">      
+    
+    <div class="card-item"  *ngFor="let item of navCards">
+      <h3 class="card-title">{{item.cardTitle}}</h3>
+      <a class="btn routing-btn" 
+        [routerLink]="item.path"
+        >Go to component
+      </a>
+    </div>  
+    
+  </div> 
+</section>
+
+
+
+

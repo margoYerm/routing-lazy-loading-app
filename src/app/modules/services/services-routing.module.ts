@@ -14,6 +14,10 @@ const servicesRoutes: Routes = [
       component: ServicesComponent,
       children: [
         {
+          path: '',
+          component: ServicesCreateComponent,
+        }, 
+        {
           path: 'services-create',
           component: ServicesCreateComponent,
         }, 

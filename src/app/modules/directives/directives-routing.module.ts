@@ -14,6 +14,10 @@ const directivesRoutes: Routes = [
     component: DirectivesComponent,
     children: [
       {
+        path: '',
+        component: CreateDirectiveComponent,
+      }, 
+      {
         path: 'create-directive',
         component: CreateDirectiveComponent,
       }, 

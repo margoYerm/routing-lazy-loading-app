@@ -10,13 +10,13 @@ const httpClientRoutes: Routes = [
       component: MyHttpClientComponent,
       children: [
         {
-          path: 'my-http-client',
+          path: '',
           component: AcquisitionDataComponent,
         }, 
-        /*{
-          path: 'custom-ng-model',
-          component: CustomNgModelComponent,
-        },  */          
+        {
+          path: 'my-http-client',
+          component: AcquisitionDataComponent,
+        },           
       ],
     },
   ];

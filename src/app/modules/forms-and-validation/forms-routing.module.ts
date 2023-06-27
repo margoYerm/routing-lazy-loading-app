@@ -11,6 +11,10 @@ const formsRoutes: Routes = [
       component: FormsAndValidationComponent,
       children: [
         {
+          path: '',
+          component: CreateFormComponent,
+        }, 
+        {
           path: 'create-form',
           component: CreateFormComponent,
         }, 

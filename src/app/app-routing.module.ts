@@ -45,8 +45,14 @@ const mainRoutes: Routes = [
   },
 
   {
+    path: '',
+    redirectTo: '/basics-and-syntax',
+    pathMatch: 'full'
+  },
+
+  {
     path: '**',
-    redirectTo: '',
+    redirectTo: '/basics-and-syntax',
     pathMatch: 'full'
   }
 ];

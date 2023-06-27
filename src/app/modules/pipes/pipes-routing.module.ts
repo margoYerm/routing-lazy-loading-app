@@ -18,9 +18,13 @@ const pipesRoutes: Routes = [
     component: PipesComponent,
     children: [
       {
-        path: 'pipes-numbers',
+        path: '',
         component: PipesNumbersComponent,
       }, 
+      {
+        path: 'pipes-numbers',
+        component: PipesNumbersComponent,
+      },
       {
         path: 'pipes-strings',
         component: PipesStringsComponent,

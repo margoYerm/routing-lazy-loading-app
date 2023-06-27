@@ -13,20 +13,22 @@ import { NgIfElseComponent } from './pages/ng-if-else/ng-if-else.component';
 import { NgSwitchComponent } from './pages/ng-switch/ng-switch.component';
 import { NgForLoopsComponent } from './pages/ng-for-loops/ng-for-loops.component';
 import { WhatIsPipesComponent } from './pages/what-is-pipes/what-is-pipes.component';
+import { NavigationMultiComponent } from './shared-components/navigation-multi/navigation-multi.component';
+
 
 const basicsRoutes: Routes = [
   { 
     path: '',
     component: BasicsAndSyntaxComponent,
-    children: [ 
-      // {
-      //   path: '',
-      //   component: BasicsAndSyntaxComponent,
-      // },      
+    children: [            
       {
-        path: 'templates-styles',
+        path: '', 
+        component: NavigationMultiComponent,
+      },   
+      {
+        path: 'templates-styles', 
         component: TemplatesStylesComponent,
-      },      
+      },     
       {
         path: 'interpolation',
         component: InterpolationComponent,
@@ -68,6 +70,11 @@ const basicsRoutes: Routes = [
         path: 'what-is-pipes',
         component: WhatIsPipesComponent,
       },
+      
+      // {
+      //   path: '/:id',
+      //   component: NavCardComponent,
+      // }
     ],
    },
 ];

@@ -14,7 +14,11 @@ const componentsRoutes: Routes = [
     component: ComponentsInDetailComponent,
     children: [
       {
-        path: 'create-components',
+        path: '', //create-components
+        component: CreateComponentsComponent,
+      }, 
+      {
+        path: 'create-components', //
         component: CreateComponentsComponent,
       }, 
       {

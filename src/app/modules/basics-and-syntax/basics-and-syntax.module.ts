@@ -16,6 +16,8 @@ import { NgIfElseComponent } from './pages/ng-if-else/ng-if-else.component';
 import { NgSwitchComponent } from './pages/ng-switch/ng-switch.component';
 import { NgForLoopsComponent } from './pages/ng-for-loops/ng-for-loops.component';
 import { WhatIsPipesComponent } from './pages/what-is-pipes/what-is-pipes.component';
+import { NavigationMultiComponent } from './shared-components/navigation-multi/navigation-multi.component';
+
 
 
 
@@ -29,6 +31,7 @@ import { WhatIsPipesComponent } from './pages/what-is-pipes/what-is-pipes.compon
   declarations: [    
     BasicsAndSyntaxComponent,
     BasicsNavComponent,
+    NavigationMultiComponent,    
     TemplatesStylesComponent,  
     InterpolationComponent, 
     WhatIsBindingComponent,
@@ -39,8 +42,8 @@ import { WhatIsPipesComponent } from './pages/what-is-pipes/what-is-pipes.compon
     NgIfElseComponent,
     NgSwitchComponent,
     NgForLoopsComponent,
-    WhatIsPipesComponent,
-  ]
+    WhatIsPipesComponent,    
+  ],  
 })
 
 export class BasicsAndSyntaxModule { }
