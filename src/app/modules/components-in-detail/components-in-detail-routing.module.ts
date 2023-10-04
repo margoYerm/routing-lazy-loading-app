@@ -11,19 +11,19 @@ import { ViewEncapsulationComponent } from './pages/view-encapsulation/view-enca
 const componentsRoutes: Routes = [
   { 
     path: '',
-    component: ComponentsInDetailComponent,
+    component: ComponentsInDetailComponent,    
     children: [
       {
         path: '', //create-components
         component: CreateComponentsComponent,
       }, 
       {
-        path: 'create-components', //
-        component: CreateComponentsComponent,
+        path: 'create-components', 
+        component: CreateComponentsComponent,        
       }, 
       {
         path: 'interaction-of-components',
-        component: InteractionOfComponentsComponent,
+        component: InteractionOfComponentsComponent,        
       }, 
       {
         path: 'lifecycle-hooks',

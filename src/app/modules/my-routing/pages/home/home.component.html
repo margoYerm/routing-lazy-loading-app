@@ -1,0 +1,54 @@
+
+<button class="btn"
+  (click)="goToPosts()"
+  >Go to posts
+</button> 
+
+<p>
+  <strong>To accept access to the posts page (navigation menu on the right
+   and button "Go to posts" on the Home page), you must press the "Login" 
+   button and wait 1 second 
+  </strong>
+</p>
+<br>
+
+<div class="decription-module">
+  <h3>What demo this module?</h3>
+  <ul>
+    <li>Basic routing.</li>
+
+    <li>Programming navigation. 
+      <small>Home page, button "Go to posts"</small> 
+    </li>
+
+    <li>Dynamic routs, Route Params
+      <small>Demo in the posts page: PostsComponent, PostsComponent,
+        PostsService, 
+      </small>
+    </li>
+
+    <li>Query params 
+      <small>Buttons "Show IDS"</small> <br>
+      Good article <a href="https://www.tektutorialshub.com/angular/angular-passing-optional-query-parameters-to-route/">
+        Query Parameters in Angular
+      </a>
+    </li>
+
+    <li>Nested pages
+      <small>Page About and Show description component</small>
+    </li>
+
+    <li>Error Page
+      <small>Added Error page for all project</small>
+    </li>
+
+    <li>Angular guards
+      <small>canActivate (Posts), canActivateChild (About -> Description)</small>
+    </li>
+
+    <li>Inject function better than constructor (Resolvers) <br>
+      Added method onDestroy(), witch protects against memory leaks (RxJS) 
+      <a href="https://www.youtube.com/watch?v=SMFhsSQvsEc">Good video</a>
+    </li>
+  </ul>
+</div>

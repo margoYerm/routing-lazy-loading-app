@@ -1,0 +1,23 @@
+@import '../../../../../assets/scss/colors';
+
+.btn-container {
+    position: sticky;
+    top: 5px;
+}
+
+.posts-container {
+    margin: 20px 0 15px;
+}
+
+.post-card {
+    margin: 10px 0;
+
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+
+    span {
+        font-weight: normal;
+    }
+}

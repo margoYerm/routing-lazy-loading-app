@@ -1,0 +1,19 @@
+<section class="authorization auth-btns-block">
+  <div class="auth-container">      
+    <button class="btn auth-btn"        
+      (click) = "auth.login()"        
+    >Login</button>
+
+    <button class="btn auth-btn"        
+      (click) = "auth.logout()"
+    >Logout</button>
+  </div>
+</section>
+
+
+<ng-template #authBeforeInfo>
+  <p class="auth-message">To access this component, click the Login button</p>
+</ng-template>
+
+<!-- *ngIf="auth.logout else authBeforeInfo"
+*ngIf="!auth.login else authBeforeInfo" -->

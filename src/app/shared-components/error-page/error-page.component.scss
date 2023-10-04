@@ -1,0 +1,12 @@
+@import '../../../assets/scss/colors';
+
+.page-error {
+    width: calc(100vw - 40px);
+}
+
+.back-link {
+    display: block;
+    color: $black;
+    width: fit-content;    
+    text-decoration: none;    
+}

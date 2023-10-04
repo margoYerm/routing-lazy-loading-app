@@ -16,6 +16,7 @@ import { ChildDetectionStrategyComponent } from './pages/change-detection-strate
 import { ViewEncapsulationComponent } from './pages/view-encapsulation/view-encapsulation.component';
 import { ChildViewEncapsulationComponent } from './pages/view-encapsulation/child-view-encapsulation/child-view-encapsulation.component';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -24,7 +25,7 @@ import { ChildViewEncapsulationComponent } from './pages/view-encapsulation/chil
   ],
   declarations: [
     ComponentsInDetailComponent,
-    CidNavComponent,
+    CidNavComponent,    
     CreateComponentsComponent,
     InteractionOfComponentsComponent,
     PostFormComponent,

@@ -14,12 +14,15 @@ import { PipesModule } from './modules/pipes/pipes.module';
 import { ServicesModule } from './modules/services/services.module';
 import { FormsAndValidationModule } from './modules/forms-and-validation/forms-and-validation.module';
 import { MyHttpClientModule } from './modules/my-http-client/my-http-client.module';
+import { ErrorPageComponent } from './shared-components/error-page/error-page.component';
+import { MyRoutingModule } from './modules/my-routing/my-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavComponent,    
+    MainNavComponent,  
+    ErrorPageComponent,  
   ],
   imports: [
     BrowserModule,    
@@ -34,6 +37,7 @@ import { MyHttpClientModule } from './modules/my-http-client/my-http-client.modu
     ServicesModule,
     FormsAndValidationModule,
     MyHttpClientModule,
+    MyRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

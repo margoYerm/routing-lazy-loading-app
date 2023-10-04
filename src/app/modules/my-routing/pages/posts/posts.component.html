@@ -1,0 +1,26 @@
+<h1>Posts page</h1>
+
+<div class="btn-container">
+  <button class="btn"
+    [routerLink]="['/my-routing/posts']"
+    [queryParams]="{showIds: true}"
+    fragment="fragment"
+    >Show Ids
+  </button>
+  <button class="btn"
+    (click)="showIdsProgram()"
+    >Show Ids (program)
+  </button>
+</div>
+
+
+<div class="posts-container">
+  <div class="post-card" *ngFor="let post of postsService.posts">
+    <h3>
+      <a [routerLink]="['/my-routing/posts', post.id]">
+        <span *ngIf="showIds">(ID {{ post.id }})</span>
+        {{ post.title }}
+      </a>
+    </h3>
+  </div>
+</div>

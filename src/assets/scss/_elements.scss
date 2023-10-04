@@ -10,6 +10,7 @@
     margin-top: 20px;
     margin-right: 10px;
     cursor: pointer;
+    user-select: none;
     &:hover {
         cursor: pointer;
         background-color: darken(rgb(10, 186, 181), 5%);
