@@ -5,41 +5,30 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-
 import { MainNavComponent } from './shared-components/main-nav/main-nav.component';
-import { BasicsAndSyntaxModule } from './modules/basics-and-syntax/basics-and-syntax.module';
-import { ComponentsInDetailModule } from './modules/components-in-detail/components-in-detail.module';
-import { DirectivesModule } from './modules/directives/directives.module';
-import { PipesModule } from './modules/pipes/pipes.module';
-import { ServicesModule } from './modules/services/services.module';
-import { FormsAndValidationModule } from './modules/forms-and-validation/forms-and-validation.module';
-import { MyHttpClientModule } from './modules/my-http-client/my-http-client.module';
 import { ErrorPageComponent } from './shared-components/error-page/error-page.component';
-import { MyRoutingModule } from './modules/my-routing/my-routing.module';
+import { ModalService } from './services/modal.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,  
-    ErrorPageComponent,  
+    ErrorPageComponent,      
   ],
   imports: [
     BrowserModule,    
     AppRoutingModule,
     CommonModule,
     FormsModule,    
-    ReactiveFormsModule,
-    BasicsAndSyntaxModule,
-    ComponentsInDetailModule,
-    DirectivesModule,
-    PipesModule,
-    ServicesModule,
-    FormsAndValidationModule,
-    MyHttpClientModule,
-    MyRoutingModule,
+    ReactiveFormsModule, 
+    HttpClientModule,
   ],
-  providers: [],
+  exports: [],
+  providers: [
+    ModalService,    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

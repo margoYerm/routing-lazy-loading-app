@@ -7,6 +7,7 @@ import { InteractionOfComponentsComponent } from './pages/interaction-of-compone
 import { LifecycleHooksComponent } from './pages/lifecycle-hooks/lifecycle-hooks.component';
 import { ChangeDetectionStrategyComponent } from './pages/change-detection-strategy/change-detection-strategy.component';
 import { ViewEncapsulationComponent } from './pages/view-encapsulation/view-encapsulation.component';
+import { DynamicComponentComponent } from './pages/dynamic-component/dynamic-component.component';
 
 const componentsRoutes: Routes = [
   { 
@@ -36,6 +37,10 @@ const componentsRoutes: Routes = [
       {
         path: 'view-encapsulation',
         component: ViewEncapsulationComponent,
+      },
+      {
+        path: 'dynamic-component',
+        component: DynamicComponentComponent
       }
     ],
    },

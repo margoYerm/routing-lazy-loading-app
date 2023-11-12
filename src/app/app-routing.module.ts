@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, PreloadingStrategy, RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './shared-components/error-page/error-page.component';
 
 const mainRoutes: Routes = [
@@ -73,7 +73,8 @@ const mainRoutes: Routes = [
 
 @NgModule({
   imports: [    
-    RouterModule.forRoot(mainRoutes),
+    RouterModule.forRoot(mainRoutes,
+      {preloadingStrategy: PreloadAllModules}), 
   ],
   exports: [RouterModule],
   providers: [],

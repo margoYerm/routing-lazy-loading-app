@@ -1,0 +1,71 @@
+<div class="container-dc">
+  <div class="card">
+    <h3>Demo Dynamic components</h3>
+
+    <p>
+      These are the components that we can call through code (in the .ts file) 
+    </p>
+
+    <div class="btn-container">
+      <div class="btn-box">
+        <p>Modal with child component</p>
+        
+        <button       
+          class="btn"      
+          (click)="modal = true"
+        >Show modal</button> 
+      </div>
+
+      <div class="btn-box">
+        <p>Modal with standalone component</p>
+        
+        <button           
+          class="btn"    
+          (click)="openModal(modalTemplate)"           
+        >Show modal</button> 
+      </div>
+
+    </div>    
+    
+  </div>
+</div>
+
+<modal
+  *ngIf="modal"
+  title="Modal window"
+  (close)="modal = false"
+></modal>
+
+<ng-template #modalTemplate>
+  <div>
+    <p>
+      This is our custom modal content. <br>
+      <a href="https://www.youtube.com/watch?v=MuHpsz7Q3P0">Video</a>
+    </p>
+    <p>
+      In this case used ComponentFactoryResolver, which deprecated,
+      for sanding this content. I didn't use new instruction from angular
+      because of I passed ng-template like content for modal window with using
+      service and standalone component.
+    </p>
+    <p>Updated instruction 
+      <a href="https://angular.io/guide/elements#example-a-popup-service"
+      >Article</a>
+    </p>
+    <p>And seconde grate article with tutorial 
+      <a href="https://dev.to/railsstudent/render-ngtemplates-dynamically-using-viewcontainerref-in-angular-17lp">
+        Render ngTemplates dynamically using ViewContainerRef in Angular
+      </a>     
+    </p>
+
+    <p> <b>Good explain</b> 
+      <a href="https://stackoverflow.com/questions/74311617/nullinjectorerror-no-provider-for-viewcontainerref-in-angular-service">
+        No provider for ViewContainerRef! in Angular Service</a> <br>
+      <a href="https://stackoverflow.com/questions/40636840/how-can-i-inject-viewcontainerref-into-a-service">
+        How can I inject ViewContainerRef into a service?</a> <br>
+      <a href="https://stackoverflow.com/questions/36198785/how-do-i-create-a-singleton-service-in-angular-2">
+        How do I create a singleton service in Angular 2?
+      </a><br>
+    </p>
+  </div>
+</ng-template>

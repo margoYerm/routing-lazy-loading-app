@@ -3,7 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Post, PostService } from '../../services/posts.service';
 import { Subject, takeUntil } from 'rxjs';
 
-const onDestroy = () => {
+/*const onDestroy = () => {
   const destroy$ = new Subject<void>();
   const viewRef = inject(ChangeDetectorRef) as ViewRef;
 
@@ -13,7 +13,7 @@ const onDestroy = () => {
   })
 
   return destroy$;
-}
+}*/
 
 @Component({
   selector: 'post',
@@ -25,7 +25,7 @@ export class PostComponent implements OnInit {
 
   postService = inject(PostService);
   page$ = inject(ActivatedRoute);
-  destroy$ = onDestroy();
+  //destroy$ = onDestroy();
 
   post: Post;  
   paramsID: string;
@@ -34,15 +34,11 @@ export class PostComponent implements OnInit {
 
   buttonNext: boolean = false;
 
-  constructor(
-    //private route: ActivatedRoute,    
-    //protected postService: PostService
-    ) { }
+  constructor() { }
 
-  ngOnInit() {    
-    //this.route.params.subscribe( (params: Params)
+  ngOnInit() {
     this.page$.params
-    .pipe(takeUntil(this.destroy$)) // protect from memory leaks 
+    //.pipe(takeUntil(this.destroy$)) // protect from memory leaks 
     .subscribe( (params: Params) => {
       console.log('Params', params);      
       this.paramsID = params['id'];          
@@ -59,5 +55,5 @@ export class PostComponent implements OnInit {
     } else {
       this.buttonNext = true;          
     } 
-  }
+  }  
 }

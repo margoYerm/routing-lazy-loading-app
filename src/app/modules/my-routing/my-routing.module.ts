@@ -11,11 +11,10 @@ import { AboutComponent } from './pages/about/about.component';
 import { DescriptionComponent } from './pages/description/description.component';
 import { PostComponent } from './pages/post/post.component';
 
-
 @NgModule({
   imports: [
     CommonModule,
-    MyRoutingRoutingModule
+    MyRoutingRoutingModule,    
   ],
   declarations: [
     MyRoutingComponent,
@@ -25,7 +24,7 @@ import { PostComponent } from './pages/post/post.component';
     PostsComponent,
     HomeComponent,
     AboutComponent,
-    PostComponent,
+    PostComponent,    
   ],
   providers: [
     PostService,

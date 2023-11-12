@@ -15,13 +15,15 @@ import { ChangeDetectionStrategyComponent } from './pages/change-detection-strat
 import { ChildDetectionStrategyComponent } from './pages/change-detection-strategy/child-detection-strategy/child-detection-strategy.component';
 import { ViewEncapsulationComponent } from './pages/view-encapsulation/view-encapsulation.component';
 import { ChildViewEncapsulationComponent } from './pages/view-encapsulation/child-view-encapsulation/child-view-encapsulation.component';
+import { DynamicComponentComponent } from './pages/dynamic-component/dynamic-component.component';
+import { ModalComponent } from './pages/dynamic-component/modal/modal.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
     ComponentsInDetailRoutingModule,
-    FormsModule,
+    FormsModule,    
   ],
   declarations: [
     ComponentsInDetailComponent,
@@ -36,6 +38,8 @@ import { ChildViewEncapsulationComponent } from './pages/view-encapsulation/chil
     ChildDetectionStrategyComponent,
     ViewEncapsulationComponent,
     ChildViewEncapsulationComponent,
+    DynamicComponentComponent,
+    ModalComponent
   ]
 })
 export class ComponentsInDetailModule { }
