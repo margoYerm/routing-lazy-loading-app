@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 export interface NavCard {
   cardTitle: string,
@@ -60,9 +61,22 @@ export class NavigationMultiComponent implements OnInit {
     },
   ]
 
-  constructor() { }
+  constructor(
+    private title: Title,
+    private meta: Meta
+  ) { 
+    //let t = title.getTitle();
+    //console.log('t =', t);  
+    //this.title.setTitle('fghv') 
+    this.meta.addTags([
+      {name: 'keywords', content: 'angular, google, meta-tags'}, 
+      {name: 'description', 
+        content: 'First learning big project with cours on udemy'}
+    ])
+  }
 
   ngOnInit() {
   }  
 
+      
 }
